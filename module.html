@@ -69,11 +69,29 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
   color: #fff;
 }
 
+
+@keyframes over {
+  0% {
+    opacity: 0;
+    margin-left: -99em;
+  }
+  50% {
+    opacity: 0;
+    margin-left: 15px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 15px;
+  }
+}
+
+
+
 #sidebar{
   display: flex;
   flex-direction: column;
-  width: 5%;
-  position: absolute;
+  width: 3.5%;
+  position: fixed;
   left: 0px;
   z-index: 1;
   background-color: white;
@@ -82,11 +100,46 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
   flex-wrap: wrap;
 
 }
-.bars>img {
+#sidebar #nav-items {
+  width: 100%;
+}
+
+#sidebar #nav-items a {
+  color: black;
+  display: flex;
+  padding: 20px;
+  text-decoration: none;
+}
+
+#sidebar #nav-items a span {
+  display: inline-block;
+  margin-left: -999rem;
+}
+
+#sidebar #nav-items:hover a span {
+  text-decoration: none;
+  font-size: inherit;
+  animation-name: over;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+
+
+#sidebar #nav-items a:active,
+#sidebar #nav-items .bars a:hover  {
+  text-decoration: none;
+  background: #4caf50;
+  color: black;
+}
+
+
+
+.bars a img {
   width: 25px;
     height: 25px;
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 5px;
+    margin-top: 0px;
 }
 .bars{
   width: 60px;
@@ -98,19 +151,37 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
   overflow: visible;
   background-color: white;
   align-items: center;
-  
-  
-  
+   
 }
-
   </style>
 </head>
 <body>
 
-  <div id = sidebar>
-    <div class = "bars"> <img src="/images/Hamburger_icon.svg.png"></div>
-    <div class = "bars"> <img src="/images/Hamburger_icon.svg.png"></div>
-    <div class = "bars"> <img src="/images/Hamburger_icon.svg.png"></div>
+  <!-- <div id = sidebar>
+    <div id = nav-items>
+    <div class = "bars">
+      <a> <img src="/images/Hamburger_icon.svg.png"><span>Shapes</span></a>
+    </div>
+    <div class = "bars">
+      <a> <img src="/images/Hamburger_icon.svg.png"><span>alphabets</span></a>
+    </div>
+    <div class = "bars">
+      <a> <img src="/images/Hamburger_icon.svg.png"><span>words</span></a>
+    </div>
+  </div> -->
+  <div id="sidebar">
+    <img src="https://img.pngio.com/download-for-free-10-png-gold-star-png-icon-top-images-at-carlisle-small-gold-star-icon-png-512_512.png" />
+    <div id="nav-items">
+
+    <div class = bars><a href="one.php"><img src="/images/Hamburger_icon.svg.png"> <span>shapes</span></a></div>  
+    <div class = bars><a href="one.php"><img src="/images/Hamburger_icon.svg.png"> <span> alphabets</span></a></div>  
+    <div class = bars><a href="one.php"><img src="/images/Hamburger_icon.svg.png"> <span>numbers</span></a></div>  
+    
+      
+    </div>
+  </div>
+
+    
 
    
   </div>
