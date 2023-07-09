@@ -1,12 +1,16 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <html>
 <head>
   <style>
+    body{
+      margin: 0%;
+    }
     .center {
   
   height: 100vh;
   display: flex;
-  
+  margin-left: 10%;
   align-items: center;
   justify-content:baseline;
   flex-wrap: wrap;
@@ -14,7 +18,7 @@
 
 .article-card {
   width: 350px;
-  height: 220px;
+  height: 200px;
   margin: 20px;
   border-radius: 12px;
   overflow:hidden;
@@ -64,9 +68,35 @@
   color: #fff;
 }
 
+#sidebar{
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  position: absolute;
+  left: 0px;
+  z-index: 1;
+  background-color: white;
+  height: 100%;
+  box-shadow: 0px 7px 25px #a6a5a5;
+  flex-wrap: wrap;
+
+}
+
+
   </style>
 </head>
 <body>
+
+  <div id = sidebar>
+    <h1>Lessons</h1>
+    <ul>
+      <li><a>lesson 1</a></li>
+      <li><a>lesson 2</a></li>
+      <li><a>lesson 3</a></li>
+      <li><a>lesson 4</a></li>
+
+    </ul>
+  </div>
   <div class="center">
     <div class="article-card">
       <div class="content">
