@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <html>
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body{
       margin: 0%;
@@ -71,7 +72,7 @@
 #sidebar{
   display: flex;
   flex-direction: column;
-  width: 10%;
+  width: 5%;
   position: absolute;
   left: 0px;
   z-index: 1;
@@ -81,21 +82,37 @@
   flex-wrap: wrap;
 
 }
-
+.bars>img {
+  width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.bars{
+  width: 60px;
+  height: 60px;
+  padding: 4px;
+  margin: 33% auto;
+  border-radius: 35px;
+ /* // border: 1px solid black; */
+  overflow: visible;
+  background-color: white;
+  align-items: center;
+  
+  
+  
+}
 
   </style>
 </head>
 <body>
 
   <div id = sidebar>
-    <h1>Lessons</h1>
-    <ul>
-      <li><a>lesson 1</a></li>
-      <li><a>lesson 2</a></li>
-      <li><a>lesson 3</a></li>
-      <li><a>lesson 4</a></li>
+    <div class = "bars"> <img src="/images/Hamburger_icon.svg.png"></div>
+    <div class = "bars"> <img src="/images/Hamburger_icon.svg.png"></div>
+    <div class = "bars"> <img src="/images/Hamburger_icon.svg.png"></div>
 
-    </ul>
+   
   </div>
   <div class="center">
     <div class="article-card">
