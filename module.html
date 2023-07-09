@@ -9,6 +9,7 @@
   
   align-items: center;
   justify-content:baseline;
+  flex-wrap: wrap;
 }
 
 .article-card {
@@ -28,6 +29,7 @@
   width: 380px;
   height: 250px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  
 }
 
 .article-card video {
@@ -71,38 +73,56 @@
         <p class="date"></p>
         <p class="title">Lines</p>
       </div>
-      <video autoplay muted loop>
-        <source src="video/nursery.mp4" type="video/mp4" />
-    </video>
+      
+        <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+          <source src="video/nursery.mp4" type="video/mp4"></source>
+          </video>
+      
     </div>
     <div class="article-card">
       <div class="content">
         <p class="date"></p>
-        <p class="title">Curves</p>
+        <p class="title">Lines</p>
       </div>
-      <video autoplay muted loop>
-        <source src="video/nursery.mp4" type="video/mp4" />
-    </video>
-    </div>
-    <div class="article-card">
+      
+        <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+          <source src="video/nursery.mp4" type="video/mp4"></source>
+          </video>
+      
+    </div><div class="article-card">
       <div class="content">
         <p class="date"></p>
-        <p class="title">Zig-Zag Line</p>
+        <p class="title">Lines</p>
       </div>
-      <video autoplay muted loop>
-        <source src="video/nursery.mp4" type="video/mp4" />
-    </video>
+      
+        <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+          <source src="video/nursery.mp4" type="video/mp4"></source>
+          </video>
+      
     </div>
-    <div class="article-card">
-      <div class="content">
-        <p class="date"></p>
-        <p class="title">Zig-Zag Line</p>
-      </div>
-      <video autoplay muted loop>
-        <source src="video/nursery.mp4" type="video/mp4" />
-    </video>
+   
     </div>
   </div>
     
+  <script>
+
+		// // Targeting video element
+		// let clip = document.querySelector("#vid")
+    
+		// /* Applying mouseover event on video clip
+		// and then we call play() function to play
+		// the video when the mouse is over the video */
+		// clip.addEventListener("mouseover", function (e) {
+		// 	clip.play();
+		// })
+
+		// /* Applying mouseout event on video clip
+		// and then we call pause() function to stop
+		// the video when the mouse is out the video */
+		// clip.addEventListener("mouseout", function (e) {
+		// 	clip.pause();
+		// })
+    
+	</script>
 </body>
 </html>
