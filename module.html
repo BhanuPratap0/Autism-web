@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Autism" />
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+      function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <!-- //custom-theme -->
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- js -->
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  <!-- //js -->
+  <link rel="stylesheet" href="css/easy-responsive-tabs.css">
+  <link rel="stylesheet" href="css/jquery.gallery.css">
+  <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- font-awesome-icons -->
+  <link href="css/font-awesome.css" rel="stylesheet"> 
+  <!-- //font-awesome-icons -->
+  <link href="//fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
 integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
@@ -70,7 +91,8 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
 }
 
 
-@keyframes over {
+
+  @keyframes over {
   0% {
     opacity: 0;
     margin-left: -99em;
@@ -85,23 +107,27 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
   }
 }
 
-
-
-#sidebar{
+#sidebar {
   display: flex;
-  flex-direction: column;
-  width: 3.5%;
+  align-items: center;
   position: fixed;
-  left: 0px;
   z-index: 1;
-  background-color: white;
+  left: 0;
+  top: 0;
   height: 100%;
-  box-shadow: 0px 7px 25px #a6a5a5;
-  flex-wrap: wrap;
-
+  background: #fff;
+  border-right: 1px solid #ddd;
+  box-shadow: 2px 1px 13px 3px #636161;
+  
 }
+
+
+
 #sidebar #nav-items {
   width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+  
 }
 
 #sidebar #nav-items a {
@@ -109,76 +135,65 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
   display: flex;
   padding: 20px;
   text-decoration: none;
+  margin-bottom: 20px;
 }
 
 #sidebar #nav-items a span {
   display: inline-block;
   margin-left: -999rem;
+  margin-top: 20px;
+
 }
+
+#img-border1{
+
+    padding: 23px;
+    border-radius: 35px;
+    background-color: white;
+    margin-left: -20px;
+    
+}
+
+
 
 #sidebar #nav-items:hover a span {
   text-decoration: none;
-  font-size: inherit;
+  font-size: 2rem;
   animation-name: over;
   animation-duration: .5s;
   animation-fill-mode: forwards;
 }
 
-
-
 #sidebar #nav-items a:active,
-#sidebar #nav-items .bars a:hover  {
+#sidebar #nav-items a:hover {
   text-decoration: none;
-  background: #4caf50;
+  /* background: #4caf50; */
   color: black;
 }
 
-
-
-.bars a img {
-  width: 25px;
-    height: 25px;
-    margin-left: 5px;
-    margin-top: 0px;
+#sidebar #nav-items a:active {
+  background: #00ff00;
 }
-.bars{
-  width: 60px;
-  height: 60px;
-  padding: 4px;
-  margin: 33% auto;
-  border-radius: 35px;
- /* // border: 1px solid black; */
-  overflow: visible;
-  background-color: white;
-  align-items: center;
-   
+
+#nav-items a  img{
+  width: 19px;
+    margin: -3px;
 }
   </style>
 
  <!-- header footer files  -->
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="keywords" content="Autism" />
-  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-      function hideURLbar(){ window.scrollTo(0,1); } </script>
-  <!-- //custom-theme -->
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-  <!-- js -->
-  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-  <!-- //js -->
-  <link rel="stylesheet" href="css/easy-responsive-tabs.css">
-  <link rel="stylesheet" href="css/jquery.gallery.css">
-  <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-  <!-- font-awesome-icons -->
-  <link href="css/font-awesome.css" rel="stylesheet"> 
-  <!-- //font-awesome-icons -->
-  <link href="//fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
-  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 <body>
+
+
+  <div id="sidebar">
+    <div id="nav-items">
+      <a href="one.php"><div id = img-border1><img src="/images/Hamburger_icon.svg.png"></div> <span>Shapes</span></a>
+      <a href="two.php"><div id = img-border1><img src="/images/Hamburger_icon.svg.png"></div> <span>Numbers</span></a>
+      <a href="three.php"><div id = img-border1><img src="/images/Hamburger_icon.svg.png"></div> <span>Alphabets</span></a>
+    </div>
+  </div>
   <script src="js/jquery.vide.min.js"></script>
 <!-- header -->
 	<div class="w3_agile_header">
@@ -225,10 +240,7 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
 	</div>
 <!-- //header -->
 
-  <div id = sidebar>
-    <div class = "bars"> <img src="/images/Hamburger_icon.svg.png"></div>
-    <div class = "bars"> <img src="/images/Hamburger_icon.svg.png"></div>
-    <div class = "bars"> <img src="/images/Hamburger_icon.svg.png"></div>
+
 
    
   </div>
