@@ -33,12 +33,16 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
     }
     .center {
   display:flex;
-  margin-top: 50px;
-  margin-left: 12%;
+  
+  margin-left: 10%;
   margin-bottom: 0%;
   flex-wrap: wrap;
+<<<<<<< HEAD
 
   margin-bottom: 50px;
+=======
+  
+>>>>>>> a4b3cf8 (vishal)
 }
 
 
@@ -113,17 +117,18 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
 
 #sidebar {
   margin-top: 50px;
-  display: flex;
-  align-items: center;
-  width: 50px;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  height: 100%;
-  background: #fff;
-  border-right: 0px solid #ddd;
-  
-  position: fixed;
+    display: flex;
+    width: 4%;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #fff;
+    border-right: 0px solid #ddd;
+    position: fixed;
+    box-shadow: 0px 11px 13px grey;
   
 }
 
@@ -146,63 +151,60 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
 
 #sidebar #nav-items a span {
   display: none;
- 
-  margin-top: 20px;
+  margin-top: 25px;
 
 }
 
 #img-border1{
 
-    padding: 23px;
-    border-radius: 35px;
-    background-color: white;
-    margin-left: -20px;
+  padding: 23px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    margin-left: -22px;
     
 }
 
+#nav-items a:hover #img-border1{
+  background: linear-gradient(180deg,#ab7ffe,#754ae2);
+  box-shadow: 2px 7px 13px 0px #754ae2;
+}
+
 #sidebar:hover{
-  width: 200px;
+  width: auto;
 }
 
 #sidebar #nav-items:hover a span {
   text-decoration: none;
-  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold ;
+  font-size: 2.2rem;
   animation-name: over;
   animation-duration: .5s;
   animation-fill-mode: forwards;
   display: inline-block;
 }
 
-#sidebar #nav-items a:active,
 #sidebar #nav-items a:hover {
   text-decoration: none;
   /* background: #4caf50; */
   color: black;
+  
 }
 
-#sidebar #nav-items a:active {
-  background: #00ff00;
+#sidebar-logo-img{
+  vertical-align: top;
+    width: 37px;
+    margin-top: 75px;
+    margin-bottom: 65px;
 }
-
 #nav-items a  img{
-  width: 19px;
+  width: 35px;
     margin: -3px;
 }
 .vidheading {
-  padding-top: 100px;
-  margin-left: 5%;
+  padding-top: 120px;
   padding-bottom: 0%;
 }
-.MainText {
-  padding-top: 120px;
-  margin-left: 5%;
- padding-bottom: 30px;
-  background-image:url(images/education.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 0;
-}
-
   </style>
 
  <!-- header footer files  -->
@@ -211,10 +213,11 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
 <body>
 
   <div id="sidebar">
+    <div><img id="sidebar-logo-img" src="/images/NicePng_books-clipart-png_1212600.png"></div>
     <div id="nav-items">
-      <a href="one.php"><div id = img-border1><img src="images/Hamburger_icon.svg.png"></div> <span>Shapes</span></a>
-      <a href="two.php"><div id = img-border1><img src="images/Hamburger_icon.svg.png"></div> <span>Numbers</span></a>
-      <a href="three.php"><div id = img-border1><img src="images/Hamburger_icon.svg.png"></div> <span>Alphabets</span></a>
+      <a href="one.php"><div id = img-border1><img src="images/L1.png"></div> <span>Shapes</span></a>
+      <a href="two.php"><div id = img-border1><img src="images/L2.png"></div> <span>Numbers</span></a>
+      <a href="three.php"><div id = img-border1><img src="images/L3.png"></div> <span>Alphabets</span></a>
     </div>
   </div>
   
@@ -263,18 +266,10 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
 		</div>
 	</div>
 <!-- //header -->
-<!-- //main heading -->
-<div class="MainText" style="color:black;">
-  <h1 class="w3_agileits_head" style="color:rgb(83, 13, 113);">
-    Welcome to our Video Learning Library
-  </h1>
-  <h5 style="font-size: medium; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center; margin-left: 10%; margin-right: 10%;">Welcome to our Video Learning Library, where learning comes alive through dynamic and engaging videos. We believe in the power of visual content to enhance the learning experience and make complex concepts more accessible.</h5>
 
-</div>
-<!-- //main heading -->
-<!-- //video section -->
+
 <div class="vidheading">
-  <h3 class="w3_agileits_head">L<span class="w3_child">i</span><span class="w3_child1">n</span><span class="w3_child2">e</span><span class="w3_child4">s</span><span class="w3_child1"></span><span class="w3_child2"></span></h3>
+  <h3 class="w3_agileits_head">V<span class="w3_child">i</span><span class="w3_child1">s</span><span class="w3_child2">u</span><span class="w3_child4">a</span><span class="w3_child1">l</span><span class="w3_child2">s</span></h3>
   <p class="w3_agile_elit"></p>
 </div>
    
@@ -315,133 +310,7 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
     </div>
    
     </div>
-    <div class="vidheading">
-      <h3 class="w3_agileits_head">C<span class="w3_child">i</span><span class="w3_child1">r</span><span class="w3_child2">c</span><span class="w3_child4">l</span><span class="w3_child1">e</span><span class="w3_child2"></span></h3>
-      <p class="w3_agile_elit"></p>
-    </div>
-       
-      </div>
-      
-      <div class="center">
-        <div class="article-card">
-          <div class="content">
-            <p class="date"></p>
-            <p class="title">Straight Lines</p>
-          </div>
-          
-            <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-              <source src="video/Hindi-sub.MP4" type="video/mp4"></source>
-              </video>
-          
-        </div>
-        <div class="article-card">
-          <div class="content">
-            <p class="date"></p>
-            <p class="title">Curve Lines</p>
-          </div>
-          
-            <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-              <source src="video/nursery.mp4" type="video/mp4"></source>
-              </video>
-          
-        </div><div class="article-card">
-          <div class="content">
-            <p class="date"></p>
-            <p class="title">Zig-Zag Lines</p>
-          </div>
-          
-            <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-              <source src="video/nursery.mp4" type="video/mp4"></source>
-              </video>
-          
-        </div>
-       
-        </div>
-        <div class="vidheading">
-          <h3 class="w3_agileits_head">R<span class="w3_child">e</span><span class="w3_child1">c</span><span class="w3_child2">t</span><span class="w3_child4">a</span><span class="w3_child1">n</span><span class="w3_child2">g</span><span class="w3_child4">l</span><span class="w3_child1">e</span></h3>
-          <p class="w3_agile_elit"></p>
-        </div>
-           
-          </div>
-          
-          <div class="center">
-            <div class="article-card">
-              <div class="content">
-                <p class="date"></p>
-                <p class="title">Straight Lines</p>
-              </div>
-              
-                <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                  <source src="video/Hindi-sub.MP4" type="video/mp4"></source>
-                  </video>
-              
-            </div>
-            <div class="article-card">
-              <div class="content">
-                <p class="date"></p>
-                <p class="title">Curve Lines</p>
-              </div>
-              
-                <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                  <source src="video/nursery.mp4" type="video/mp4"></source>
-                  </video>
-              
-            </div><div class="article-card">
-              <div class="content">
-                <p class="date"></p>
-                <p class="title">Zig-Zag Lines</p>
-              </div>
-              
-                <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                  <source src="video/nursery.mp4" type="video/mp4"></source>
-                  </video>
-              
-            </div>
-           
-            </div>
-            <div class="vidheading">
-              <h3 class="w3_agileits_head">S<span class="w3_child">q</span><span class="w3_child1">u</span><span class="w3_child2">a</span><span class="w3_child4">r</span><span class="w3_child1">e</span><span class="w3_child2"></span></h3>
-              <p class="w3_agile_elit"></p>
-            </div>
-               
-              </div>
-              
-              <div class="center">
-                <div class="article-card">
-                  <div class="content">
-                    <p class="date"></p>
-                    <p class="title">Straight Lines</p>
-                  </div>
-                  
-                    <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                      <source src="video/Hindi-sub.MP4" type="video/mp4"></source>
-                      </video>
-                  
-                </div>
-                <div class="article-card">
-                  <div class="content">
-                    <p class="date"></p>
-                    <p class="title">Curve Lines</p>
-                  </div>
-                  
-                    <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                      <source src="video/nursery.mp4" type="video/mp4"></source>
-                      </video>
-                  
-                </div><div class="article-card">
-                  <div class="content">
-                    <p class="date"></p>
-                    <p class="title">Zig-Zag Lines</p>
-                  </div>
-                  
-                    <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                      <source src="video/nursery.mp4" type="video/mp4"></source>
-                      </video>
-                  
-                </div>
-               
-                </div>
-  <!-- //video section -->                        
+  
   <!-- footer -->
 	
 	<div class="w3layouts_copy_right">
