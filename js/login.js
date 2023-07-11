@@ -1,4 +1,4 @@
-document.getElementById("loginform").addEventListener("submit", auth);
+document.getElementById("form1").addEventListener("submit", auth);
 
 function auth(event) {
      event.preventDefault();
@@ -9,7 +9,7 @@ function auth(event) {
 
      if (username === "admin@gmail.com" && password === "user") {
           window.location.replace("index.html");
-     }  if (username === "" && password === "") {
+     }  else if (username === "" && password === "") {
           alert("Please enter information");
      } else{
          alert("Please enter valid information");
