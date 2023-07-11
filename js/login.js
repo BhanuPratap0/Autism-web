@@ -8,7 +8,7 @@ function auth(event) {
      console.log(username);
 
      if (username === "admin@gmail.com" && password === "user") {
-          window.location.replace("index.html");
+          window.location.replace("index1.html");
      }  else if (username === "" && password === "") {
           alert("Please enter information");
      } else{
