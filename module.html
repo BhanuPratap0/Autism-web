@@ -30,7 +30,7 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
     }
     .center {
   
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   margin-left: 10%;
   align-items: center;
@@ -108,16 +108,18 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
 }
 
 #sidebar {
+  margin-top: 50px;
   display: flex;
   align-items: center;
-  position: fixed;
+  width: 50px;
   z-index: 1;
   left: 0;
   top: 0;
   height: 100%;
   background: #fff;
-  border-right: 1px solid #ddd;
-  box-shadow: 2px 1px 13px 3px #636161;
+  border-right: 0px solid #ddd;
+  
+  position: fixed;
   
 }
 
@@ -139,8 +141,8 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
 }
 
 #sidebar #nav-items a span {
-  display: inline-block;
-  margin-left: -999rem;
+  display: none;
+ 
   margin-top: 20px;
 
 }
@@ -154,7 +156,9 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
     
 }
 
-
+#sidebar:hover{
+  width: 200px;
+}
 
 #sidebar #nav-items:hover a span {
   text-decoration: none;
@@ -162,6 +166,7 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
   animation-name: over;
   animation-duration: .5s;
   animation-fill-mode: forwards;
+  display: inline-block;
 }
 
 #sidebar #nav-items a:active,
@@ -186,7 +191,6 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
 </head>
 <body>
 
-
   <div id="sidebar">
     <div id="nav-items">
       <a href="one.php"><div id = img-border1><img src="/images/Hamburger_icon.svg.png"></div> <span>Shapes</span></a>
@@ -194,6 +198,7 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
       <a href="three.php"><div id = img-border1><img src="/images/Hamburger_icon.svg.png"></div> <span>Alphabets</span></a>
     </div>
   </div>
+  
   <script src="js/jquery.vide.min.js"></script>
 <!-- header -->
 	<div class="w3_agile_header">
@@ -252,7 +257,7 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
       </div>
       
         <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-          <source src="video/nursery.mp4" type="video/mp4"></source>
+          <source src="video/Hindi-sub.MP4" type="video/mp4"></source>
           </video>
       
     </div>
@@ -281,98 +286,20 @@ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmF
     </div>
   </div>
   <!-- footer -->
-	<div class="w3_agileits_twitter_post">
-		<div class="container">
-			<h4>"</a> egestas."</h4>
-		</div>
-	</div>
-	<div class="footer">
-		<div class="col-md-6 wthree_footer_grid_left">
-			<div class="col-md-5 wthree_footer_grid_left1">
-				<h4>About Us</h4>
-				<p>An Online learning platform for autism kids.</p>
-			</div>
-			<div class="col-md-4 wthree_footer_grid_left1">
-				<h4>Navigation</h4>
-				<ul>
-					<li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i><a href="index.html">Home</a></li>
-					<li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i><a href="#about" class="scroll">About Us</a></li>
-					<li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i><a href="#programs" class="scroll">Learning Section</a></li>
-					<!-- <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i><a href="#newsletter" class="scroll">Newsletter</a></li> -->
-					<li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i><a href="#testimonials" class="scroll">Testimonials</a></li>
-				</ul>
-			</div>
-			<div class="col-md-3 wthree_footer_grid_left1">
-				<h4>Others</h4>
-				<ul>
-					<!-- <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i><a href="#">Media</a></li> -->
-					<li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i><a href="#">Mobile Apps</a></li>
-					<!-- <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i><a href="#">Privacy Policy</a></li> -->
-				</ul>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-		<div class="col-md-6 wthree_footer_grid_right">
-			<div class="wthree_footer_grid_right_main">
-				<div class="col-md-5 wthree_footer_grid_right1">
-					<h5>Contact Us</h5>
-					<ul>
-						<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-						<li><i class="fa fa-phone" aria-hidden="true"></i>+(000) 123 311</li>
-						<li><i class="fa fa-fax" aria-hidden="true"></i>+123 421</li>
-					</ul>
-				</div>
-				<div class="col-md-7 wthree_footer_grid_right2">
-					<div class="wthree_footer_grid_right2_w3">
-						<a href="#" data-toggle="modal" data-target="#myModal">
-							<img src="images/1.jpg" alt=" " class="img-responsive" />
-						</a>
-					</div>
-					<div class="wthree_footer_grid_right2_w3">
-						<a href="#" data-toggle="modal" data-target="#myModal">
-							<img src="images/12.jpg" alt=" " class="img-responsive" />
-						</a>
-					</div>
-					<div class="wthree_footer_grid_right2_w3">
-						<a href="#" data-toggle="modal" data-target="#myModal">
-							<img src="images/13.jpg" alt=" " class="img-responsive" />
-						</a>
-					</div>
-					<div class="wthree_footer_grid_right2_w3">
-						<a href="#" data-toggle="modal" data-target="#myModal">
-							<img src="images/15.jpg" alt=" " class="img-responsive" />
-						</a>
-					</div>
-					<div class="wthree_footer_grid_right2_w3">
-						<a href="#" data-toggle="modal" data-target="#myModal">
-							<img src="images/22.jpg" alt=" " class="img-responsive" />
-						</a>
-					</div>
-					<div class="wthree_footer_grid_right2_w3">
-						<a href="#" data-toggle="modal" data-target="#myModal">
-							<img src="images/23.jpg" alt=" " class="img-responsive" />
-						</a>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="wthree_footer_grid_right_main1">
-				<ul class="agileinfo_social_icons agileits_footer_social">
-					<li><a href="#" class="agileits_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					<li><a href="#" class="w3_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li><a href="#" class="w3l_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-					<li><a href="#" class="w3ls_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="clearfix"> </div>
-	</div>
+	
 	<div class="w3layouts_copy_right">
 		<div class="container">
-			
+			<p>© 2023 Autism. All rights reserved</p>
 		</div>
 	</div>
+  <div class="wthree_footer_grid_right_main1">
+    <ul class="agileinfo_social_icons agileits_footer_social">
+      <li><a href="#" class="agileits_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li><a href="#" class="w3_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      <li><a href="#" class="w3l_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+      <li><a href="#" class="w3ls_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+    </ul>
+  </div>
 <!-- //footer -->
     
   <script>

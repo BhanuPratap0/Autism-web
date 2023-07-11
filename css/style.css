@@ -42,7 +42,11 @@ input[type="submit"],a,.agileinfo_social_icons li{
 }
 /*-- header --*/
 .w3_agile_header{
+	z-index: 0;
 	background:#212121;
+}
+.w3_agile_header .container{
+	
 }
 .w3_agile_header_left{
 	float:left;
