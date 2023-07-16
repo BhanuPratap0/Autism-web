@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0%;
+        }
+        #sidebar{
+            position: fixed;
+            height: 100%;
+            width: 5%;
+            left: 0%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background: #FFF;
+            box-shadow: 5px 0px 17px 9px rgba(193, 189, 189, 0.25);
+            padding-top: 3%;
+        }
+
+        #home-btn{
+            margin-top: 20px;
+        }
+        #home-btn img{
+            width: 50px;
+            height: 50px;
+        }
+        #nav-items{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            /* margin-top: 50%; */
+            height: 50%;
+            /* margin: 33%  auto; */
+        }
+        #nav-items a  img{
+            width: 50px;
+            height: 50px;
+        }
+        #nav-items a span{
+            display: none;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 30px;
+            
+        }
+       
+        #sidebar:hover{
+            width:auto;     
+        }
+        #sidebar:hover a span{
+            display: inline;
+            text-decoration: none;
+             font-family: 'Courier New', Courier, monospace;
+            
+        }
+
+        #top-bar{
+            z-index: 1;
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            height: 15%;
+            background: #FFFDFD;
+            box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+            display: flex;
+            align-items: center;
+        }
+
+    #top-bar select{
+    font-size: 1.5rem;
+    height: 28%;
+    margin-left: 50%;
+    width: 6%;
+    border: none;
+    margin-top: -5px;
+    top: 2px;
+    position: relative;
+}
+
+    
+
+        #home-btn:active{
+            border-radius: 50px;
+            background-color: yellow;
+            padding: 10px;;
+        }
+        #top-bar a img{
+            margin:15px;
+            width: 70px;
+            height: 70px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id = "top-bar">
+    <a><img src="/images/image 9.png"></a>
+    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected>Levels</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div id = "sidebar">
+        <div id="home-btn"><img src = "/images/image 5.png"></div>
+        <div id = "nav-items">
+            <a><img src = "/images/image 6.png"><span>Tutorials</span></a>
+            <a><img src = "/images/image 7.png"><span>Activities</span></a>
+            <a><img src = "/images/image 8.png"><span>Quizes</span></a>
+        </div>
+    </div>
+</body>
+</html>
