@@ -2887,7 +2887,7 @@ span.char22 {
 	}
 }
 
-.banner{
+/* .banner{
 	padding: 0;
 	margin: 0;  
 	width: 100%;
@@ -3024,4 +3024,61 @@ span.char22 {
   }
   .bg5{
 	background-image: url(https://images.unsplash.com/reserve/wPCyys8TPCHY3GXm2N2D_ssp_inthewoods_1.jpg?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=654d988a19f43ca9ac27f2eacbe2a554);
+  } */
+
+
+  @keyframes scroll {
+	0% {
+	  transform: translateX(0);
+	}
+	100% {
+	  transform: translateX(calc(-250px * 7));
+	}
+  }
+  
+  .slider {
+	background: white;
+	box-shadow:  10px 20px -5px rgba(0, 0, 0, 0.125);
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	overflow: hidden;
+	position: relative;
+	width: 98vw;
+	padding: 5px;
+	margin-top: 20px;
+  }
+  
+  .slider::before,
+  .slider::after {
+	background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+	content: "";
+	
+	position: absolute;
+	width: 200px;
+	z-index: 2;
+  }
+  
+  .slider::after {
+	right: 0;
+	top: 0;
+	transform: rotateZ(180deg);
+  }
+  
+  .slider::before {
+	left: 0;
+	top: 0;
+  }
+  
+  .slider .slide-track {
+	animation: scroll 40s linear infinite;
+	display: flex;
+	width: calc(250px * 14);
+  }
+  
+  .slider .slide {
+	height: auto;
+	margin-left: 5px;
+	margin-right: 5px;
   }
