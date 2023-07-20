@@ -440,7 +440,7 @@ input[type="submit"],a,.agileinfo_social_icons li{
 }
 .w3_agile_banner_info p.w3_agileits_banner_para{
 	font-size: 1em;
-    color: #fff;
+    color: black;
     text-transform: uppercase;
     letter-spacing: 4px;
 }
@@ -451,11 +451,13 @@ input[type="submit"],a,.agileinfo_social_icons li{
 }
 .w3_agile_banner_info h2{
 	font-size: 3em;
-    color: #fff;
+    color: black;
     line-height: 1.5em;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     font-style: italic;
+	font-weight: bold;
+	
 }
 .w3_elit_para{
 	color:#fff;
@@ -655,10 +657,12 @@ span.char22 {
 }
 .w3_agile_elit{
 	text-align:center;
-	color:#999;
+	color: black;
 	line-height:2em;
 	padding-bottom:1em;
 	position:relative;
+	font-family: 'Poppins', sans-serif;
+	
 }
 .w3_agile_elit:before{
 	content: '';
@@ -3165,3 +3169,4 @@ span.char22 {
 	  height: auto;
 	}
   }
+
