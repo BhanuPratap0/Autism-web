@@ -3421,7 +3421,7 @@ span.char22 {
   border-bottom: 8px solid #fff;
 }
 
-a {
+.sec-center a {
   position: relative;
   color: #fff;
   transition: all 200ms linear;
