@@ -1,35 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Autism" />
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-        function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <!-- //custom-theme -->
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- js -->
-    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-    <!-- //js -->
-    <link rel="stylesheet" href="css/easy-responsive-tabs.css">
-    <link rel="stylesheet" href="css/jquery.gallery.css">
-    <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- font-awesome-icons -->
-    <link href="css/font-awesome.css" rel="stylesheet"> 
-    <!-- //font-awesome-icons -->
-    <link href="//fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body{
-            margin: 0%;
-        }
       
-    .center {
+        ::selection {
+  background: #05bc55;
+  color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+.center {
   display:flex;
   margin-top: 120px;
   margin-left: 10%;
@@ -39,7 +31,147 @@
   margin-bottom: 50px;
 }
 
+main {
+  margin: 50px 0 0 220px;
+  padding: 20px;
+}
+main p {
+  color: #6c757d;
+}
+main h1 {
+  font-size: 60px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style-type: none;
+}
+.sideBar {
+  z-index: 1000;
+  background: #fff;
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 20px #00000030;
+  border-radius: 10px;
 
+  height: 100vh;
+  width: 60px;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: width 0.2s ease;
+}
+.sideBar.dark {
+  background: #141414;
+  color: #eee;
+}
+body.dark {
+  background: #222;
+  color: #eee;
+}
+.sideBar.dark * .link-icon {
+  color: #ccc;
+}
+.profile1 {
+  color: #222;
+  font-size: 40px;
+  margin-bottom: 30px;
+  background: #eee;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navLinks {
+  width: 100%;
+}
+.navLinks li {
+  border-radius: 15px;
+}
+.navLinks li a {
+  padding: 15px;
+}
+
+.navLinks:last-child {
+  margin-top: auto;
+  margin-bottom: 100px;
+}
+
+.link {
+  display: flex;
+  height: 30px;
+}
+
+.link-text {
+  color: #6c757d;
+  font-weight: 500;
+  font-size: 18px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.2s ease;
+}
+
+.link-icon {
+  color: #222;
+  flex-basis: 30px;
+  font-size: 28px;
+  margin-right: 15px;
+}
+
+.text-muted {
+  color: #ccc;
+  font-size: 15px;
+  padding: 20px 0;
+}
+
+.navLinks li:hover {
+  background: #eee;
+}
+
+.navLinks li:hover .link > * {
+  color: #05bc55;
+}
+
+.sideBar:hover .link-text {
+  transform: scaleX(1);
+}
+
+.sideBar:hover {
+  width: 200px;
+  align-items: flex-start;
+}
+
+figure img {
+  width: 100%;
+}
+figure {
+  text-align: center;
+}
+.like-color {
+  color: #4267b2;
+}
+.like-anim {
+  animation: like 0.6s;
+}
+
+.navLinks li:hover .link-like > * {
+  color: #4267b2;
+}
+
+@keyframes like {
+  50% {
+    transform: scale(2) rotate(-45deg);
+  }
+}
 .article-card {
   width: 350px;
   height: 200px;
@@ -92,192 +224,127 @@
   color: #fff;
 }
 
-
-
-
-        #sidebar{
-            position: fixed;
-            height: 100%;
-            width: 5%;
-            top:0%;
-            left: 0%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            background: #FFF;
-            box-shadow: 5px 0px 17px 9px rgba(193, 189, 189, 0.25);
-            padding-top: 3%;
-            z-index: 1;
-            z-index: 2;
-        }
-
-        #home-btn{
-            margin-top: 20px;
-        }
-        #home-btn img{
-            width: 50px;
-            height: 50px;
-        }
-        #nav-items{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            /* margin-top: 50%; */
-            height: 50%;
-            /* margin: 33%  auto; */
-        }
-        #nav-items a  img{
-            width: 50px;
-            height: 50px;
-        }
-        #nav-items a{
-            text-decoration: none;
-        }
-        #nav-items a span{
-            text-decoration: none;
-            display: none;
-            font-size: 2rem;
-            font-weight: bold;
-            padding: 30px;
-            color: black;
-            
-        }
-       
-        #sidebar:hover{
-            width:auto;     
-        }
-        #sidebar:hover a span{
-            display: inline;
-            text-decoration: none;
-            text-align: center;
-            
-        }
-
-        #top-bar{
-            z-index: 10;
-            position: absolute;
-            top: 0%;
-            width: 100%;
-            height: 15%;
-            background: #FFFDFD;
-            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
-            padding-top: 20px;
-            align-items: center;
-        }
-
-            #top-bar select{
-            font-size: 1.5rem;
-            height: 28%;
-           
-            width: 6%;
-            border: none;
-            margin-top: -5px;
-            top: 2px;
-            position: relative;
-        }
-
-    #section-container{
-       padding: 10px;
-        display: flex;
-        justify-content: center;
-    }
-    #section-container:hover{
-        background: rgb(205, 204, 204);
-    }
-    
-
-
-    
-        #home-btn:active{
-            border-radius: 50px;
-            background-color: yellow;
-            padding: 10px;;
-        }
-        #top-bar a img{
-            margin-left: 10px;
-            /* padding :5px; */
-            width: 70px;
-            height: 70px;
-        }
-        #sidebar-open-btn{
-          width:70px;
-          height: 70px;
-        }
-.sec-center{
-  margin-top: -4%;
-}
     </style>
 </head>
 <body>
-
-     <div id = "top-bar">
-      <div id="sidebar-open-btn" ><a href=""><img src = "images/image 9.png"></a></div>
-      <div class="sec-center"> 	
-        <input class="dropdown" type="checkbox" id="dropdown" name="dropdown"/>
-        <label class="for-dropdown" for="dropdown">LEVELS &nbsp;&nbsp; &nbsp;&nbsp; <b>v</b><i class="uil uil-arrow-down"></i></label>
-        <div class="section-dropdown"> 
-          <a href="#">Level-1<i class="uil uil-arrow-right"></i></a>
-          <a href="#">Level-2<i class="uil uil-arrow-right"></i></a>
-          <div class="section-dropdown-sub"> 
-          </div>
-          <a href="#">Level-3<i class="uil uil-arrow-right"></i></a>
-          <a href="#">Level-4<i class="uil uil-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-    <div id = "sidebar">
-        <div id="home-btn" style="margin-bottom: -180px;" ><img src = "/images/image 5.png"></div>
-        <div id = "nav-items">
-           <div id="section-container"><a href=""><img src = "/images/image 6.png"><span >Tutorials</span></a></div> 
-            <div id="section-container"><a href=""><img src = "/images/image 7.png"><span>Activities</span></a></div>
-           <div id="section-container"><a href=""><img src = "/images/image 8.png"><span>Quizes</span></a></div> 
-        </div>
-    </div>
-    <div class="vidheading" style="margin-top: 150px;margin-bottom: 0px;">
-        <h3 class="w3_agileits_head">L<span class="w3_child">i</span><span class="w3_child1">n</span><span class="w3_child2">e</span><span class="w3_child4">s</span><span class="w3_child1"></span><span class="w3_child2"></span></h3>
-        <p class="w3_agile_elit"></p>
-      </div>
-         
-        </div>
+    <nav class="sideBar">
+        <div class="profile1">
+          <img class="profile1" src="images/home.png" alt="error">
         
-        <div class="center">
-          <div class="article-card">
-            <div class="content">
-              <p class="date"></p>
-              <p class="title">Straight Lines</p>
-              
-              
-            </div>
-            
-              <video href="video.html" onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                <source src="video/Hindi-sub.MP4" type="video/mp4"></source>
-                </video>
-                
-                
+        </div>
+        <p class="text-muted">Analytics</p>
+        <ul class="navLinks">
+          <li>
+            <a href="#" class="link">
+              <img class="fa-solid fa-table-columns link-icon" src="images/dashboard.png" alt="">
+              <span class="link-text">DashBoard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link">
+              <img class="fa-solid fa-table-columns link-icon" src="images/performence.png" alt="">
+              <span class="link-text">Performance</span>
+            </a>
+          </li>
+        </ul>
+        <p class="text-muted">Content</p>
+        <ul class="navLinks">
+          <li>
+            <a href="#" class="link">
+              <img class="fa-solid fa-table-columns link-icon" src="images/videos.png" alt="">
+              <span class="link-text">Videos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link link-like">
+              <img class="fa-solid fa-table-columns link-icon" src="images/quiz.png" alt="">
+              <span class="link-text">Quizes</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="navLinks">
+          <li>
+            <a href="#" class="link" data-theme>
+              <img class="fa-solid fa-table-columns link-icon" src="images/games.png" alt="">
+              <span class="link-text">Games</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link">
+              <img class="fa-solid fa-table-columns link-icon" src="images/languages.png" alt="">
+              <span class="link-text">Setting</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <main>
+        
+        <div class="vidheading" style="margin-top: 150px;margin-bottom: 0px;">
+          <h3 class="w3_agileits_head">L<span class="w3_child">i</span><span class="w3_child1">n</span><span class="w3_child2">e</span><span class="w3_child4">s</span><span class="w3_child1"></span><span class="w3_child2"></span></h3>
+          <p class="w3_agile_elit"></p>
+        </div>
+           
           </div>
-          <div class="article-card">
-            <div class="content">
-              <p class="date"></p>
-              <p class="title">Curve Lines</p>
+          
+          <div class="center">
+            <div class="article-card">
+              <div class="content">
+                <p class="date"></p>
+                <p class="title">Straight Lines</p>
+                
+                
+              </div>
+              
+                <video href="video.html" onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+                  <source src="video/Hindi-sub.MP4" type="video/mp4"></source>
+                  </video>
+                  
+                  
             </div>
-            
-              <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                <source src="video/nursery.mp4" type="video/mp4"></source>
-                </video>
-            
-          </div><div class="article-card">
-            <div class="content">
-              <p class="date"></p>
-              <p class="title">Zig-Zag Lines</p>
-            </div>
-            
-              <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                <source src="video/nursery.mp4" type="video/mp4"></source>
-                </video>
-            
-            </div>
-         
-         
+            <div class="article-card">
+              <div class="content">
+                <p class="date"></p>
+                <p class="title">Curve Lines</p>
+              </div>
+              
+                <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+                  <source src="video/nursery.mp4" type="video/mp4"></source>
+                  </video>
+              
+            </div><div class="article-card">
+              <div class="content">
+                <p class="date"></p>
+                <p class="title">Zig-Zag Lines</p>
+              </div>
+              
+                <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+                  <source src="video/nursery.mp4" type="video/mp4"></source>
+                  </video>
+              
+              </div>
+           
+       
+      </main>
+      <script>
+        const themeToggle = document.querySelector("[data-theme]");
+const sideBar_element = document.querySelector(".sideBar");
+const like_element = document.querySelector(".link-like");
+themeToggle.addEventListener("click", () => {
+  themeToggle.querySelector("i").classList.toggle("fa-toggle-on");
+  sideBar_element.classList.toggle("dark");
+  document.querySelector("body").classList.toggle("dark");
+});
+
+like_element.addEventListener("click", () => {
+  like_element.querySelector(".fa-thumbs-up").classList.add("like-anim");
+  like_element.querySelector(".fa-thumbs-up").classList.toggle("like-color");
+
+  setTimeout(() => {
+    like_element.querySelector(".fa-thumbs-up").classList.remove("like-anim");
+  }, 600);
+});
+
+      </script>
 </body>
 </html>
