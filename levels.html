@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ::selection {
+            background: #05bc55;
+            color: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #1a1a1a;
+        }
+
+        .center {
+            display: flex;
+            margin-top: 120px;
+            margin-left: 10%;
+            margin-bottom: 0%;
+            flex-wrap: wrap;
+
+            margin-bottom: 50px;
+        }
+
+        main {
+            margin: 50px 0 0 220px;
+            padding: 20px;
+        }
+
+        main p {
+            color: #6c757d;
+        }
+
+        main h1 {
+            font-size: 60px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .sideBar {
+            z-index: 1000;
+            background: #fff;
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 20px #00000030;
+            border-radius: 10px;
+
+            height: 100vh;
+            width: 60px;
+
+            display: flex;
+            flex-direction: column;
+
+            transition: width 0.2s ease;
+        }
+
+        .sideBar.dark {
+            background: #141414;
+            color: #eee;
+        }
+
+        body.dark {
+            background: #222;
+            color: #eee;
+        }
+
+        .sideBar.dark * .link-icon {
+            color: #ccc;
+        }
+
+        .profile1 {
+            color: #222;
+            font-size: 40px;
+            margin-bottom: 30px;
+
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navLinks {
+            width: 100%;
+        }
+
+        .navLinks li {
+            border-radius: 15px;
+        }
+
+        .navLinks li a {
+            padding: 15px;
+        }
+
+        .navLinks:last-child {
+            margin-top: auto;
+            margin-bottom: 100px;
+        }
+
+        .link {
+            display: flex;
+            height: 30px;
+        }
+
+        .link-text {
+            color: #6c757d;
+            font-weight: 500;
+            font-size: 18px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all 0.2s ease;
+        }
+
+        .link-icon {
+            color: #222;
+            flex-basis: 30px;
+            font-size: 28px;
+            margin-right: 15px;
+        }
+
+        .text-muted {
+            color: #ccc;
+            font-size: 15px;
+            padding: 20px 0;
+        }
+
+        .navLinks li:hover {
+            background: #eee;
+        }
+
+        .navLinks li:hover .link>* {
+            color: #05bc55;
+        }
+
+        .sideBar:hover .link-text {
+            transform: scaleX(1);
+        }
+
+        .sideBar:hover {
+            width: 200px;
+            align-items: flex-start;
+        }
+
+        figure img {
+            width: 100%;
+        }
+
+        figure {
+            text-align: center;
+        }
+
+        .like-color {
+            color: #4267b2;
+        }
+
+        .like-anim {
+            animation: like 0.6s;
+        }
+
+        .navLinks li:hover .link-like>* {
+            color: #4267b2;
+        }
+
+        a.css3dbutton {
+            background: #c1e75c;
+            /* default green background color of button */
+            color: black;
+            text-decoration: none;
+            font: bold 18px Arial;
+            /* font size and style */
+            position: relative;
+            display: inline-block;
+            margin-right: 15px;
+            margin-top: 25px;
+            /* spacing between multiple buttons */
+            padding: 15px;
+            /* padding inside button */
+            border-radius: 85px;
+            /* border radius of button */
+            width: 85px;
+            /* dimensions of button */
+            height: 85px;
+            outline: none;
+            box-shadow: 0 8px 0 #8dab3b,
+                /* depth and color of main shadow */
+                0 0 3px rgba(0, 0, 0, 0.2),
+                0 20px 20px #eee;
+            -moz-transition: all 0.2s ease-in-out;
+            /* transition style and duration */
+            -o-transition: all 0.2s ease-in-out;
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+
+        a.css3dbutton span.outer {
+            /* outermost text container */
+            text-align: center;
+            width: 100%;
+            display: block;
+            position: relative;
+            top: 50%;
+            /* center element */
+            -webkit-transform: translateY(-50%);
+            /* center element */
+            -ms-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        a.css3dbutton span.outer span.top {
+            /* top line */
+            display: block;
+            padding-bottom: 4px;
+        }
+
+        a.css3dbutton span.outer span.bottom {
+            /* bottom line */
+            border-top: 1px solid black;
+            padding-top: 4px;
+            display: block;
+            text-transform: uppercase;
+            line-height: 12px;
+            font-size: 60%;
+        }
+
+
+        a.css3dbutton:hover {
+            background: #9cc62b;
+            /* background color when mouse rolls over button */
+            box-shadow: none;
+            -ms-transform: translateY(8px);
+            /* shift button downwards by shadow depth amount */
+            -webkit-transform: translate3D(0, 8px, 0);
+            -moz-transform: translateY(8px);
+            transform: translate3D(0, 8px, 0);
+        }
+
+
+        a.css3dbutton.blue {
+            background: #a6e9f7;
+            box-shadow: 0 8px 0 #529dad,
+                /* depth and color of main shadow */
+                0 0 3px rgba(0, 0, 0, 0.2),
+                0 20px 20px #eee;
+        }
+
+        a.css3dbutton.blue:hover {
+            background: #66cbe1;
+            /* background color when mouse rolls over button */
+            box-shadow: none;
+        }
+
+        a.css3dbutton.pink {
+            background: #fbbaba;
+            box-shadow: 0 8px 0 #d74848,
+                /* depth and color of main shadow */
+                0 0 3px rgba(0, 0, 0, 0.2),
+                0 20px 20px #eee;
+        }
+
+        a.css3dbutton.pink:hover {
+            background: #ea6161;
+            /* background color when mouse rolls over button */
+            box-shadow: none;
+        }
+
+        a.css3dbutton.yellow {
+            background: orangered;
+            box-shadow: 0 8px 0 orange,
+                /* depth and color of main shadow */
+                0 0 3px rgba(0, 0, 0, 0.2),
+                0 20px 20px #eee;
+        }
+
+        a.css3dbutton.yellow:hover {
+            background: #ecd347;
+            /* background color when mouse rolls over button */
+            box-shadow: none;
+        }
+
+        .button-grp {
+            margin-left: 15%;
+            margin-top: 5%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="sideBar">
+        <div class="profile1">
+            <a href="index1.html"><img class="profile1" src="images/home.png" alt="error"></a>
+
+        </div>
+        <p class="text-muted">Analytics</p>
+        <ul class="navLinks">
+            <li>
+                <a href="#" class="link">
+                    <img class="fa-solid fa-table-columns link-icon" src="images/level-up.png" alt="">
+                    <span class="link-text">Levels</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="link">
+                    <img class="fa-solid fa-table-columns link-icon" src="images/performence.png" alt="">
+                    <span class="link-text">Performance</span>
+                </a>
+            </li>
+        </ul>
+        <p class="text-muted">Content</p>
+        <ul class="navLinks">
+            <li>
+                <a href="new Module.html" class="link">
+                    <img class="fa-solid fa-table-columns link-icon" src="images/videos.png" alt="">
+                    <span class="link-text">Videos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="link link-like">
+                    <img class="fa-solid fa-table-columns link-icon" src="images/quiz.png" alt="">
+                    <span class="link-text">Quizes</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="navLinks">
+            <li>
+                <a href="#" class="link" data-theme>
+                    <img class="fa-solid fa-table-columns link-icon" src="images/games.png" alt="">
+                    <span class="link-text">Games</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="link">
+                    <img class="fa-solid fa-table-columns link-icon" src="images/languages.png" alt="">
+                    <span class="link-text">Setting</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="button-grp">
+        <a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-1</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a>
+
+        <a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-2</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a>
+
+        <a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-3</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a>
+
+        <a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-4</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a>
+
+        <a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-5</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a>
+
+        <a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-6</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a>
+
+        <a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-7</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a>
+        <a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-8</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a>
+        <a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-9</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a>
+        <a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-10</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a><a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-11</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a><a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-12</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a><a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-13</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a><a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-14</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a><a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-15</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a><a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-16</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a><a href="#" class="css3dbutton yellow">
+            <span class="outer">
+                <span class="top">LEVEL-17</span>
+                <span class="bottom">Ogbugbu Info Hub</span>
+            </span>
+        </a>
+    </div>
+</body>
+
+</html>
