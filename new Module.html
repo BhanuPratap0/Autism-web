@@ -229,15 +229,15 @@ figure {
 <body>
     <nav class="sideBar">
         <div class="profile1">
-          <img class="profile1" src="images/home.png" alt="error">
+          <a href="index1.html"><img class="profile1" src="images/home.png" alt="error"></a>
         
         </div>
         <p class="text-muted">Analytics</p>
         <ul class="navLinks">
           <li>
             <a href="#" class="link">
-              <img class="fa-solid fa-table-columns link-icon" src="images/dashboard.png" alt="">
-              <span class="link-text">DashBoard</span>
+              <img class="fa-solid fa-table-columns link-icon" src="images/level-up.png" alt="">
+              <span class="link-text">Levels</span>
             </a>
           </li>
           <li>
@@ -279,52 +279,47 @@ figure {
       </nav>
       
       <main>
-        
-        <div class="vidheading" style="margin-top: 150px;margin-bottom: 0px;">
-          <h3 class="w3_agileits_head">L<span class="w3_child">i</span><span class="w3_child1">n</span><span class="w3_child2">e</span><span class="w3_child4">s</span><span class="w3_child1"></span><span class="w3_child2"></span></h3>
-          <p class="w3_agile_elit"></p>
-        </div>
-           
+        <div class="aks-page-description">
+          <div class="aks-container">
+            <h1>LINES</h1>
+            <p></p>
           </div>
-          
-          <div class="center">
-            <div class="article-card">
-              <div class="content">
-                <p class="date"></p>
-                <p class="title">Straight Lines</p>
-                
-                
-              </div>
-              
-                <video href="video.html" onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                  <source src="video/Hindi-sub.MP4" type="video/mp4"></source>
-                  </video>
-                  
-                  
+        </div>
+        
+        <section class="aks-container">
+          <h2></h2>
+        <!-- GRID -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); grid-gap: 20px;">
+        
+          <!-- Video 1 -->
+          <div style="background-color: whitesmoke; padding: 15px;">
+            <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">STRAIGHT LINE</h3>
+            <div style="position: relative; width: 100%; padding-top: 56.25%;">
+              <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="VIDEO/Hindi-sub.MP4" title="Pine Siskin"  frameborder="0"  allowfullscreen></iframe>
             </div>
-            <div class="article-card">
-              <div class="content">
-                <p class="date"></p>
-                <p class="title">Curve Lines</p>
-              </div>
-              
-                <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                  <source src="video/nursery.mp4" type="video/mp4"></source>
-                  </video>
-              
-            </div><div class="article-card">
-              <div class="content">
-                <p class="date"></p>
-                <p class="title">Zig-Zag Lines</p>
-              </div>
-              
-                <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                  <source src="video/nursery.mp4" type="video/mp4"></source>
-                  </video>
-              
-              </div>
-           
-       
+            
+          </div>
+      
+          <!-- Video 2 -->
+          <div style="background-color: whitesmoke; padding: 15px;">
+            <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">CURVE LINE</h3>
+            <div style="position: relative; width: 100%; padding-top: 56.25%;">
+              <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="VIDEO/Hindi-sub.MP4" title="Salmon Lifecycle with Ranger Tessa" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+          </div>
+      
+          <!-- Video 3 -->
+          <div style="background-color: whitesmoke; padding: 15px;">
+            <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">DASHED LINE</h3>
+            <div style="position: relative; width: 100%; padding-top: 56.25%;">
+              <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="VIDEO/Hindi-sub.MP4" title="Pacific Treefrog Calling" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+          </div>
+      
+          
+        <!-- END OF GRID -->
       </main>
       <script>
         const themeToggle = document.querySelector("[data-theme]");
