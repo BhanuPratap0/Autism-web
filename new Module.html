@@ -81,7 +81,7 @@ body.dark {
   color: #222;
   font-size: 40px;
   margin-bottom: 30px;
-  background: #eee;
+  
   width: 60px;
   height: 60px;
   border-radius: 10px;
@@ -167,62 +167,6 @@ figure {
   color: #4267b2;
 }
 
-@keyframes like {
-  50% {
-    transform: scale(2) rotate(-45deg);
-  }
-}
-.article-card {
-  width: 350px;
-  height: 200px;
-  margin: 20px;
-  border-radius: 12px;
-  overflow:hidden;
-  position: relative;
-  font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 300ms;
-}
-
-.article-card:hover {
-  transform: translateY(-2px);
-  width: 380px;
-  height: 250px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  
-}
-
-.article-card video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.article-card .content {
-  box-sizing: border-box;
-  width: 100%;
-  position: absolute;
-  padding: 30px 20px 20px 20px;
-  height: auto;
-  bottom: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
-}
-
-.article-card .date,
-.article-card .title {
-  margin: 0;
-}
-
-.article-card .date {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 4px;
-}
-
-.article-card .title {
-  font-size: 17px;
-  color: #fff;
-}
 
     </style>
 </head>
@@ -241,7 +185,7 @@ figure {
             </a>
           </li>
           <li>
-            <a href="#" class="link">
+            <a href="progress.html" class="link">
               <img class="fa-solid fa-table-columns link-icon" src="images/performence.png" alt="">
               <span class="link-text">Performance</span>
             </a>
